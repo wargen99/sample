@@ -26,6 +26,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class ProjectConfig {
 
+	
+	
+	///http://stackoverflow.com/questions/26308035/spring-boot-spring-data-jpa-with-multiple-datasources 참조
 	@Value("${projectDatasource.datasource.url}")
 	private String databaseUrl;
 
