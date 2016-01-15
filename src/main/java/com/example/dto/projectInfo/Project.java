@@ -1,5 +1,6 @@
 package com.example.dto.projectInfo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +13,8 @@ public class Project {
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private int idx;
 	private String projectName;
+	//org.hibernate.tool.hbm2ddl.SchemaExport  : Column length too big for column 'projectDescription' (max = 21845); use BLOB or TEXT instead
+	@Column(name ="projectDescription", columnDefinition="TEXT(65535)")
 	private String projectDescription;
 
 	public int getIdx() {
